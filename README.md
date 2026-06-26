@@ -10,6 +10,11 @@ Github 开源项目地址：**[https://github.com/lingfengz/dengbao-csps](https:
 [![Skill Maps](https://img.shields.io/badge/skill--maps-3-orange?style=flat-square)](skill-maps/)
 [![Knowledge Base](https://img.shields.io/badge/knowledge--base-35%2B%20docs-brightgreen?style=flat-square)](skills/等保测评知识库/)
 
+---
+
+> ⚠️ **免责声明**
+> 本项目所有内容仅供**网络安全学习、合规评估和授权测试**参考。渗透测试相关用例仅限于在**已获得明确书面授权**的目标上执行。任何未经授权的测试行为均属违法，使用者需自行承担法律责任。本项目不对任何滥用行为承担责任。
+
 ## 简介
 
 基于中国网络安全等级保护制度 2.0（等保 2.0）国家标准，汇集、整理等保测评领域**技能图谱**（Skill Map）和**AI Agent Skill**，覆盖等保全流程——**定级备案 → 差距分析 → 安全整改 → 等级测评 → 持续监督**，以及配套知识库、政策培训、项目管理。
