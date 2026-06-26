@@ -2,6 +2,14 @@
 
 Github 开源项目地址：**[https://github.com/lingfengz/dengbao-csps](https://github.com/lingfengz/dengbao-csps)**，欢迎 **Star** :)。
 
+[![Stars](https://img.shields.io/github/stars/lingfengz/dengbao-csps?style=social)](https://github.com/lingfengz/dengbao-csps/stargazers)
+[![Forks](https://img.shields.io/github/forks/lingfengz/dengbao-csps?style=social)](https://github.com/lingfengz/dengbao-csps/network/members)
+[![Last Commit](https://img.shields.io/github/last-commit/lingfengz/dengbao-csps)](https://github.com/lingfengz/dengbao-csps/commits/main)
+[![License](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
+[![Skills](https://img.shields.io/badge/skills-19-green?style=flat-square)](skills/)
+[![Skill Maps](https://img.shields.io/badge/skill--maps-3-orange?style=flat-square)](skill-maps/)
+[![Knowledge Base](https://img.shields.io/badge/knowledge--base-35%2B%20docs-brightgreen?style=flat-square)](skills/等保测评知识库/)
+
 ## 简介
 
 基于中国网络安全等级保护制度 2.0（等保 2.0）国家标准，汇集、整理等保测评领域**技能图谱**（Skill Map）和**AI Agent Skill**，覆盖等保全流程——**定级备案 → 差距分析 → 安全整改 → 等级测评 → 持续监督**，以及配套知识库、政策培训、项目管理。
@@ -12,6 +20,56 @@ Github 开源项目地址：**[https://github.com/lingfengz/dengbao-csps](https:
 2. **skills/** — 可直接部署到 Hermes Agent 或其他 AI Agent 的 Skill 文件，每个文件包含完整的角色定义和 YAML 元数据，供 AI Agent 直接调用。
 
 除非特别声明，本开源项目所有内容均只代表贡献者个人立场，与其公司背景无关。有任何不同意见和反馈，请提交 [Issue](https://github.com/lingfengz/dengbao-csps/issues) 讨论。
+
+## 🚀 快速开始
+
+### 1. 克隆仓库
+
+```bash
+git clone https://github.com/lingfengz/dengbao-csps.git
+cd dengbao-csps
+```
+
+### 2. 一键安装到 Hermes Agent
+
+```bash
+bash install.sh
+```
+
+安装完成后，重启 Hermes Agent，所有 19 个 Skill 即自动加载，下次对话即可使用。
+
+### 3. 快速体验
+
+安装后在对话中输入以下任意一句即可触发对应 Skill：
+
+| 你想做什么 | 说这句话 |
+|-----------|---------|
+| 🎯 给系统定级 | "帮我的系统做等保定级" |
+| 🔍 做差距分析 | "看看我系统差多少" |
+| 🛠 设计整改方案 | "帮我设计等保整改方案" |
+| 📋 生成测评报告 | "生成一份等保测评报告" |
+| 🐧 检查 Linux 基线 | "检查 Linux 服务器安全基线" |
+| 📚 查法规要求 | "等保三级有哪些要求" |
+| 📊 项目管理 | "帮我规划等保测评项目" |
+
+### 4. 在其他 AI Agent 中使用
+
+无需安装，直接将 `skills/` 中任意 `.md` 文件作为 **system prompt** 加载即可。每个文件包含完整的角色定义、工作流程和交互规则，兼容 Claude、GPT、DeepSeek 等主流模型。
+
+```bash
+# 示例：使用等保定级助手
+cat skills/等保定级助手.md  # 复制内容作为 system prompt
+```
+
+### 5. 浏览技能图谱
+
+```bash
+# 查看所有技能图谱
+ls skill-maps/
+
+# 查看具体图谱
+cat skill-maps/map-等保测评工程师.md
+```
 
 ## 技能图谱
 
