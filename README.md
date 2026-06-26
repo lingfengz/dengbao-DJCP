@@ -1,6 +1,6 @@
 # 等保测评技能图谱 & AI Agent Skill 集合
 
-Github 开源项目地址：**[https://github.com/Braza-zc/dengbao-csps](https://github.com/Braza-zc/dengbao-csps)**，欢迎 **Star** :)。
+Github 开源项目地址：**[https://github.com/lingfengz/dengbao-csps](https://github.com/lingfengz/dengbao-csps)**，欢迎 **Star** :)。
 
 ## 简介
 
@@ -11,7 +11,7 @@ Github 开源项目地址：**[https://github.com/Braza-zc/dengbao-csps](https:/
 1. **skill-maps/** — 技能图谱（参考 [TeamStuQ/skill-map](https://github.com/TeamStuQ/skill-map) 格式），以树状知识结构梳理各角色的能力要求，帮助从业者系统化学习。
 2. **skills/** — 可直接部署到 Hermes Agent 或其他 AI Agent 的 Skill 文件，每个文件包含完整的角色定义和 YAML 元数据，供 AI Agent 直接调用。
 
-除非特别声明，本开源项目所有内容均只代表贡献者个人立场，与其公司背景无关。有任何不同意见和反馈，请提交 [Issue](https://github.com/Braza-zc/dengbao-csps/issues) 讨论。
+除非特别声明，本开源项目所有内容均只代表贡献者个人立场，与其公司背景无关。有任何不同意见和反馈，请提交 [Issue](https://github.com/lingfengz/dengbao-csps/issues) 讨论。
 
 ## 技能图谱
 
@@ -145,7 +145,7 @@ dengbao-csps/
 ## 加入我们
 
 - 提交技能图谱或 AI Agent Skill：直接提交 Pull Request
-- 改进建议 / Bug 反馈：提交 [Issue](https://github.com/Braza-zc/dengbao-csps/issues)
+- 改进建议 / Bug 反馈：提交 [Issue](https://github.com/lingfengz/dengbao-csps/issues)
 - 新增领域：欢迎贡献新的等保相关技能图谱
 
 ## 版本信息
