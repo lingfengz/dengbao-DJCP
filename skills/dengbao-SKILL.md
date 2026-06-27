@@ -7,7 +7,7 @@ license: MIT
 metadata:
   hermes:
     tags: [security, dengbao, 等保, 等级保护, compliance, cybersecurity, 网络安全]
-    related_skills: [dengbao-dingji-zhushou, dengbao-chaju-fenxi-zhuanjia, dengbao-ceping-zhishiku, dengbao-assessment-report-generator, dengbao-interview-checklist-expert, penetration-test-case-designer, security-remediation-designer, dengbao-comprehensive-assessment-expert, dengbao-policy-training-expert, dengbao-compliance-configuration-auditor, dengbao-assessment-project-manager, linux-dengbao-baseline-check-agent, database-security-check-agent, dengbao-major-risk-identification]
+    related_skills: [dengbao-dingji-zhushou, dengbao-chaju-fenxi-zhuanjia, dengbao-ceping-zhishiku, dengbao-assessment-report-generator, dengbao-interview-checklist-expert, penetration-test-case-designer, security-remediation-designer, dengbao-comprehensive-assessment-expert, dengbao-policy-training-expert, dengbao-compliance-configuration-auditor, dengbao-assessment-project-manager, linux-dengbao-baseline-check-agent, database-security-check-agent, dengbao-major-risk-identification, dengbao-2025-policy-expert, dengbao-high-risk-official-guideline]
 ---
 
 # 等保测评 AI Agent Skill 集合
@@ -47,12 +47,15 @@ metadata:
 | **等保测评报告生成器** | `等保测评报告生成器.md` | 生成公安部格式正式测评报告 |
 | 渗透测试用例设计专家 | `渗透测试用例设计专家.md` | 等保合规渗透测试用例设计 |
 | **等保测评专家（全栈）** | `等保测评专家 AI Skill.md` | 全栈测评能力融合 |
+| 等保测评重大风险问题指导 | `等保测评重大风险问题指导 Skill.md` | 32 项重大风险触发项判定（A-01~A-32） |
 
 ### 📚 知识支撑
 | Skill | 文件名 | 用途 |
 |-------|--------|------|
 | **等保测评知识库** | `等保测评知识库/` | 35+ 文档完整知识库（法规/基线/案例/漏洞） |
 | 等保政策解读与培训专家 | `等保政策解读与培训专家.md` | 法规解读 + 培训材料 |
+| 等保2025政策释疑 | `网络安全等级保护工作事项说明专家.md` | 公网安〔2025〕1846号 24项政策问答 |
+| 等保高风险判定实施指引 | `网络安全等级保护测评高风险判定实施指引（试行）.md` | 官方高风险判例规则 |
 
 ### 📊 管理
 | Skill | 文件名 | 用途 |

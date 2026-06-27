@@ -7,7 +7,7 @@ license: MIT
 metadata:
   hermes:
     tags: [security, dengbao, risk, major-risk, compliance, 等保, 重大风险, 风险判定]
-    related_skills: [dengbao-chaju-fenxi-zhuanjia, dengbao-assessment-report-generator, penetration-test-case-designer, security-remediation-designer]
+    related_skills: [dengbao-chaju-fenxi-zhuanjia, dengbao-assessment-report-generator, penetration-test-case-designer, security-remediation-designer, dengbao-high-risk-official-guideline]
 ---
 
 > ⚠️ **安全声明**
@@ -155,5 +155,18 @@ metadata:
 
 ---
 
-**结束**  
+| **结束**  \
 本指导 Skill 可直接嵌入等保测评工作流程，作为风险判断的依据手册。测评人员应熟练背诵核心触发项，并结合现场实际灵活运用。
+
+---
+
+## 八、关联参考
+
+本 Skill（A-01~A-32 触发项表）与以下文件互为补充：
+
+| 文件 | 说明 |
+|------|------|
+| `网络安全等级保护测评高风险判定实施指引（试行）.md` | 官方高风险判例规则（6.1.1.1~10.5.1.1），含适用等级、触发条件、可缓解条件。与本 Skill 的 A-01~A-32 对照使用效果最佳。 |
+| `等保测评报告生成器.md` | 在测评报告中引用重大风险判定结果 |
+
+> 两套规则对照建议：A-01≈6.1.1.1，A-11≈6.3.2.1，A-18≈6.4.1.1，A-22≈6.4.3.2，A-24≈6.4.5.1，A-25≈6.4.5.2，A-26≈6.4.6.1，其余可自适应对应。
