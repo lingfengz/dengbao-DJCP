@@ -35,38 +35,89 @@ git clone https://github.com/lingfengz/dengbao-csps.git
 cd dengbao-csps
 ```
 
-### 2. 一键安装到 Hermes Agent
+### 2. 安装方法
+
+根据你的 AI Agent 环境选择一种：
+
+---
+
+#### 方法 A：Hermes Agent（桌面版）
 
 ```bash
+# 一键安装所有 Skill
 bash install.sh
+
+# 输出示例：
+# 📦 等保测评 Skill 集合安装工具
+# 源目录: /path/to/dengbao-csps/skills
+# 目标目录: ~/.hermes/profiles/default/skills/dengbao-csps
+# ✅ 安装完成！共 19 个 skill 文件
 ```
 
-安装完成后，重启 Hermes Agent，所有 19 个 Skill 即自动加载，下次对话即可使用。
+安装后**重启 Hermes 桌面版**，下次对话即可自动触发。
 
-### 3. 快速体验
+> 如果使用自定义 profile：`bash install.sh <profile-name>`
 
-安装后在对话中输入以下任意一句即可触发对应 Skill：
-
-| 你想做什么 | 说这句话 |
-|-----------|---------|
-| 🎯 给系统定级 | "帮我的系统做等保定级" |
-| 🔍 做差距分析 | "看看我系统差多少" |
-| 🛠 设计整改方案 | "帮我设计等保整改方案" |
-| 📋 生成测评报告 | "生成一份等保测评报告" |
-| 🐧 检查 Linux 基线 | "检查 Linux 服务器安全基线" |
-| 📚 查法规要求 | "等保三级有哪些要求" |
-| 📊 项目管理 | "帮我规划等保测评项目" |
-
-### 4. 在其他 AI Agent 中使用
-
-无需安装，直接将 `skills/` 中任意 `.md` 文件作为 **system prompt** 加载即可。每个文件包含完整的角色定义、工作流程和交互规则，兼容 Claude、GPT、DeepSeek 等主流模型。
+#### 方法 B：Hermes Agent（命令行）
 
 ```bash
-# 示例：使用等保定级助手
-cat skills/等保定级助手.md  # 复制内容作为 system prompt
+# 手动复制到 profile 的 skills 目录
+mkdir -p ~/.hermes/profiles/default/skills/dengbao-csps
+cp -r skills/* ~/.hermes/profiles/default/skills/dengbao-csps/
+# 删除 archive（已合并的备份文件）
+rm -rf ~/.hermes/profiles/default/skills/dengbao-csps/archive
+
+# 重启 Hermes 使生效
+hermes restart
 ```
 
-### 5. 浏览技能图谱
+#### 方法 C：其他 AI Agent（Claude / GPT / DeepSeek / 通义千问 等）
+
+无需安装，直接复制文件内容作为 **System Prompt** 使用：
+
+```bash
+# macOS/Linux：复制到剪贴板
+cat skills/等保定级助手.md | pbcopy
+
+# 或输出到文件
+cat skills/等保定级助手.md > my-prompt.md
+```
+
+然后在 AI 对话中粘贴即可。每个 Skill 文件包含：
+- ✅ 角色定义（你是谁）
+- ✅ 核心能力（你能做什么）
+- ✅ 工作流程（怎么做）
+- ✅ 交互规则（怎么问用户）
+- ✅ 示例对话（参考）
+
+#### 方法 D：VS Code / Cursor / 其他编辑器 AI 插件
+
+将 Skill 文件添加到项目的 `.clinerules` 或 `.cursorrules`：
+
+```bash
+# 以等保定级助手为例，追加到规则文件
+echo "" >> .clinerules
+cat skills/等保定级助手.md >> .clinerules
+```
+
+### 3. 验证安装
+
+安装后，在 Hermes 或其他 AI Agent 中输入以下任意一句，确认对应 Skill 被触发：
+
+| 你想做什么 | 说这句话 | 触发 Skill |
+|-----------|---------|-----------|
+| 🎯 给系统定级 | "帮我做个等保定级" | `等保定级助手` |
+| 🔍 检查差距 | "看看我系统差多少" | `等保差距分析专家` |
+| 🛠 设计整改 | "帮我设计等保整改方案" | `安全整改方案设计师` |
+| 📋 生成报告 | "生成一份等保测评报告" | `等保测评报告生成器` |
+| 🐧 Linux 基线 | "检查 Linux 服务器安全基线" | `Linux 等保基线检查 Agent` |
+| 💾 数据库安全 | "检查 MySQL 数据库安全" | `数据库安全检查 Agent` |
+| 📚 查法规 | "等保三级有哪些要求" | `等保政策解读与培训专家` |
+| 📊 项目管理 | "帮我规划等保测评项目" | `等保测评项目管理专家` |
+| ⚠️ 风险判定 | "这个漏洞算重大风险吗" | `等保测评重大风险问题指导` |
+| 🔐 渗透测试 | "设计渗透测试用例" | `渗透测试用例设计专家` |
+
+### 4. 浏览技能图谱
 
 ```bash
 # 查看所有技能图谱
@@ -74,6 +125,20 @@ ls skill-maps/
 
 # 查看具体图谱
 cat skill-maps/map-等保测评工程师.md
+
+# 或在浏览器中打开 GitHub 查看渲染效果
+```
+
+### 5. 查看完整知识库
+
+知识库位于 `skills/等保测评知识库/`，包含 **35+ 文档**：
+
+```bash
+# 查看知识库导航
+cat skills/等保测评知识库/SKILL.md
+
+# 查看完整内容（83K，3200+ 行）
+less skills/等保测评知识库/references/全部内容.md
 ```
 
 ## 技能图谱
@@ -223,4 +288,4 @@ dengbao-csps/
 
 MIT License
 
-Copyright (c) 2026 等保测评 Skill 项目贡献者
+2026 等保测评 Skill 项目贡献者 @lingfengz
