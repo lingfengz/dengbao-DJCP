@@ -71,7 +71,38 @@ rm -rf ~/.hermes/profiles/default/skills/dengbao-csps/archive
 hermes restart
 ```
 
-#### 方法 C：其他 AI Agent（Claude / GPT / DeepSeek / 通义千问 等）
+#### 方法 C：Codex CLI（OpenAI）
+
+[Codex CLI](https://github.com/openai/codex) 是 OpenAI 的终端编程 Agent。将 Skill 作为系统指令注入：
+
+```bash
+# 方式1：启动时加载
+codex --system "$(cat skills/等保定级助手.md)"
+
+# 方式2：对话中引用文件（Codex 支持 @ 引用）
+# 在对话中输入：@skills/等保定级助手.md  请帮我做等保定级
+
+# 方式3：添加到项目根目录的 CLAUDE.md（Codex 自动读取）
+cp skills/等保定级助手.md .codex.md
+```
+
+#### 方法 D：Claude Code（Anthropic）
+
+[Claude Code](https://docs.anthropic.com/en/docs/claude-code/overview) 是 Anthropic 的终端编程 Agent。将 Skill 添加到项目规则文件：
+
+```bash
+# 方式1：追加到 CLAUDE.md（Claude Code 自动读取）
+cat skills/等保定级助手.md >> CLAUDE.md
+
+# 方式2：启动时加载
+claude --prompt "$(cat skills/等保定级助手.md)"
+
+# 方式3：对话中引用
+# 在 CLAUDE.md 中写入：
+# > 参考 skills/等保定级助手.md 的规则执行等保定级任务
+```
+
+#### 方法 E：其他 AI Agent（GPT / DeepSeek / 通义千问 / Kimi 等）
 
 无需安装，直接复制文件内容作为 **System Prompt** 使用：
 
@@ -90,7 +121,7 @@ cat skills/等保定级助手.md > my-prompt.md
 - ✅ 交互规则（怎么问用户）
 - ✅ 示例对话（参考）
 
-#### 方法 D：VS Code / Cursor / 其他编辑器 AI 插件
+#### 方法 F：VS Code / Cursor / 其他编辑器 AI 插件
 
 将 Skill 文件添加到项目的 `.clinerules` 或 `.cursorrules`：
 
