@@ -6,7 +6,7 @@ Github 开源项目地址：**[https://github.com/lingfengz/dengbao-DJCP](https:
 [![Forks](https://img.shields.io/github/forks/lingfengz/dengbao-DJCP?style=social)](https://github.com/lingfengz/dengbao-DJCP/network/members)
 [![Last Commit](https://img.shields.io/github/last-commit/lingfengz/dengbao-DJCP)](https://github.com/lingfengz/dengbao-DJCP/commits/main)
 [![License](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
-[![Skills](https://img.shields.io/badge/skills-22-green?style=flat-square)](skills/)
+[![Skills](https://img.shields.io/badge/skills-23-green?style=flat-square)](skills/)
 [![Skill Maps](https://img.shields.io/badge/skill--maps-7-orange?style=flat-square)](skill-maps/)
 [![Knowledge Base](https://img.shields.io/badge/knowledge--base-35%2B%20topics-brightgreen?style=flat-square)](skills/等保测评知识库/)
 
@@ -51,7 +51,7 @@ bash install.sh
 # 📦 等保测评 Skill 集合安装工具
 # 源目录: /path/to/dengbao-DJCP/skills
 # 目标目录: ~/.hermes/profiles/default/skills/dengbao-DJCP
-# ✅ 安装完成！共 24 个 skill 文件（22 个 Skill + 知识库 2 个文件）
+# ✅ 安装完成！共 25 个 skill 文件（23 个 Skill + 知识库 2 个文件）
 ```
 
 安装后**重启 Hermes 桌面版**，下次对话即可自动触发。
@@ -161,6 +161,9 @@ ls skill-maps/
 # 查看具体图谱
 cat skill-maps/map-等保测评工程师.md
 
+# 查看交互式思维导图（浏览器打开）
+open skill-maps/visual/map-等保测评工程师.html
+
 # 或在浏览器中打开 GitHub 查看渲染效果
 ```
 
@@ -244,6 +247,12 @@ less skills/等保测评知识库/references/全部内容.md
 | 等保高风险判定实施指引 | `skills/网络安全等级保护测评高风险判定实施指引（试行）.md` | 官方高风险判例规则 |
 | 等保保护工作方案 | `skills/等保保护工作方案专家.md` | 三级以上系统保护工作方案的编制与报送 |
 
+### 🏛 关保
+
+| Skill | 文件名 | 一句话描述 |
+|-------|--------|-----------|
+| **关键信息基础设施保护专家** | `skills/关键信息基础设施保护专家.md` | 关基认定三要素判断、责任体系、GB/T 39204 六大活动落地、年度合规统筹与检查应对 |
+
 ### 📊 管理
 
 | Skill | 文件名 | 一句话描述 |
@@ -278,8 +287,8 @@ bash install.sh
 2. 为每个技能节点提供推荐学习资源和路径
 3. 持续跟踪公安部最新政策（公网安〔2025〕1846号、〔2025〕2391号、公安部令第176号等），及时更新各 Skill（已完成 2026-08 一轮：网安法修订、数安条例、风险评估办法、监督检查办法、新技术行标、数据安全专项标准）
 4. ~~增加密评（商用密码应用安全评估）技能图谱~~（✅ 已完成 2026-09：map-密评工程师）
-5. 增加关保（关键信息基础设施保护）相关 Skill（✅ 2026-09 已完成 map-关保工程师 技能图谱，配套 AI Agent Skill 待建）
-6. 提供可视化的 XMind / PNG 版本技能图谱
+5. ~~增加关保（关键信息基础设施保护）相关 Skill~~（✅ 已完成 2026-09：map-关保工程师 技能图谱 + 关键信息基础设施保护专家 Skill）
+6. ~~提供可视化的 XMind / PNG 版本技能图谱~~（✅ 已完成 2026-09：`skill-maps/visual/` 下 7 份 markmap 交互式思维导图，浏览器打开后可另存/导出 PNG）
 
 ## MarkDown 分级规范
 
@@ -296,14 +305,9 @@ dengbao-DJCP/
 ├── install.sh                       # 一键安装到 Hermes Agent
 ├── .gitignore
 ├── skill-maps/                      # 技能图谱
-│   ├── map-等保测评工程师.md
-│   ├── map-等保安全工程师.md
-│   ├── map-等保合规经理.md
-│   ├── map-等保测评项目经理.md
-│   ├── map-等保渗透测试工程师.md
-│   ├── map-密评工程师.md
-│   └── map-关保工程师.md
-└── skills/                            # 22 个 AI Agent Skill + 1 个知识库
+│   ├── map-*.md                     # 7 份图谱
+│   └── visual/                      # 7 份 markmap 交互式思维导图（HTML）
+└── skills/                            # 23 个 AI Agent Skill + 1 个知识库
     ├── dengbao-SKILL.md             # [入口] 技能总览
     ├── 等保定级助手.md               # ★ 核心 · 支持第五级系统
     ├── 等保差距分析专家.md            # ★ 核心
@@ -314,7 +318,8 @@ dengbao-DJCP/
     ├── 网络安全等级保护工作事项说明专家.md  # 2025政策释疑
     ├── 网络安全等级保护测评高风险判定实施指引（试行）.md  # 官方判例
     ├── 等保保护工作方案专家.md        # 三级以上系统保护方案
-    └── ... (14 个配套 Agent)
+    ├── 关键信息基础设施保护专家.md    # ★ 新增 · 关基认定与六大保护活动
+    └── ... (13 个配套 Skill)
 ```
 
 ## 加入我们
@@ -337,6 +342,11 @@ dengbao-DJCP/
 | 等保渗透测试工程师 | 渗透测试与红队 | 刑法红线与授权管理 / PTES 七阶段 / OWASP 漏洞类别 / 等保场景化测试用例 / 高风险判例联动 |
 | 密评工程师 | 商用密码应用安全评估 | 密码法与条例（760号令）/ GB/T 39786 四层面 / SM2/3/4/9 与国密协议 / 密码产品合规 / 量化评估 |
 | 关保工程师 | 关基安全负责人 | 关保条例（745号令）/ 1960号指导意见 / GB/T 39204 六大活动 / 等保-密评-风险评估年度协同 |
+
+### 🔧 2026-09-08 同日后续两轮（同属 v2.2）
+
+- **第二轮 · 全仓库巡检**：补齐 LICENSE；修复 dengbao-SKILL.md 与主控协调 Agent 的残留/无效 Skill 引用；frontmatter 版本同步；知识库统一表述为“35+ 主题（单文件合并版）”（明细见 CHANGELOG）
+- **第三轮 · 遗留事项推进**：新增关保配套 Skill「关键信息基础设施保护专家」（Skill 总数 22 → 23）；`skill-maps/visual/` 生成 7 份 markmap 交互式思维导图（对应改进目标 #6）
 
 ---
 
@@ -379,7 +389,7 @@ dengbao-DJCP/
 
 ### v 2.2（当前）
 - **7 份技能图谱**（测评工程师 / 安全工程师 / 合规经理 / 测评项目经理 / 渗透测试工程师 / 密评 / 关保）
-- **22 个 AI Agent Skill**（覆盖定级 / 差距 / 整改 / 报告 / 风险判定 / 知识库 / 项目管理 / 政策释疑）
+- **23 个 AI Agent Skill**（覆盖定级 / 差距 / 整改 / 报告 / 风险判定 / 知识库 / 项目管理 / 政策释疑 / 关保）
 - 35+ 主题完整知识库（单文件合并版）
 - 2025版更新：支持新版报告模板、第五级系统、保护工作方案、备案动态更新
 - **v2.2 更新（2026-09）**：补齐 4 份建设中技能图谱（测评项目经理 / 渗透测试工程师 / 密评 / 关保），技能图谱 3 → 7
