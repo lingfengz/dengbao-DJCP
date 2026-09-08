@@ -23,7 +23,23 @@
 - 目录结构：skill-maps 列表同步为 7 份
 - 新增“📌 近期更新（v2.2 · 2026-09）”章节；版本信息升级 v2.2（当前）
 
-### 三、遗留事项
+### 三、全仓库巡检与修复（2026-09-08 第二轮）
+
+> 全量检查项：文件清单 vs README 声称、相对链接死链扫描、frontmatter 版本一致性、Skill 间引用有效性、政策时效联网核查
+
+| 问题 | 处理 |
+|------|------|
+| LICENSE 文件缺失（README 徽章死链） | ✅ 补齐 MIT LICENSE（各 Skill frontmatter 均声明 MIT） |
+| dengbao-SKILL.md 流程全景图残留已删除的“整改专家” | ✅ 修正为现有 Skill 结构 |
+| dengbao-SKILL.md 未收录配套技能图谱 | ✅ 新增“配套技能图谱（skill-maps）”章节（7 份清单）；frontmatter version 2.0.0 → 2.2.0 |
+| 等保主控协调 Agent 路由表及 Routing Rules 引用不存在的 Skill 名（整改专家/物理安全专家/Windows 安全Agent/云安全Agent/制度生成Agent/风险评估专家等） | ✅ 全部映射到实际存在的 Skill；frontmatter version → 1.1.0 |
+| 人格与记忆 frontmatter version 2.0.0 落后于内容版本表（v2.1） | ✅ 同步 2.2.0；头部标注 v2.2；版本表新增 v2.2 行 |
+| 知识库“35+ 文档”表述与物理结构（SKILL.md + 单文件 全部内容.md）不符 | ✅ README（4 处）与知识库 SKILL.md 统一改为“35+ 主题（单文件合并版）”；徽章 docs → topics |
+| README install.sh 示例输出“共 22 个 skill 文件”与实际 24 个 .md 不符 | ✅ 改为 24（22 个 Skill + 知识库 2 个文件） |
+| 政策时效核查（2026-09-08 联网检索） | ✅ 未发现 2026-08 之后需纳入的新政策/新标准；2025 版高风险判定（81 项、三级结论体系）等表述与现行一致 |
+| skills/ 内 Markdown 互链 | ✅ 扫描无死链 |
+
+### 四、遗留事项
 
 - 技能图谱节点级学习资源与学习路径（改进目标 #2）
 - 可视化 XMind / PNG 版本技能图谱（改进目标 #6）

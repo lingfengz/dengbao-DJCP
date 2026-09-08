@@ -1,7 +1,7 @@
 ---
 name: dengbao-csps
 description: "Master skill for 等保测评 (Chinese Cybersecurity Level Protection). Entry point to a comprehensive skill ecosystem covering classification, gap analysis, report generation, interview checklists, penetration testing, remediation design, and compliance knowledge base."
-version: 2.0.0
+version: 2.2.0
 author: Hermes Agent
 license: MIT
 metadata:
@@ -63,6 +63,22 @@ metadata:
 |-------|--------|------|
 | 等保测评项目管理专家 | `等保测评项目管理专家.md` | 全流程项目管理 |
 
+## 配套技能图谱（skill-maps）
+
+本 Skill 集合在 GitHub 仓库中还配套 **7 份技能图谱**（`skill-maps/` 目录，Markdown 分层知识树；不随 install.sh 安装，供从业者学习与 Agent 规划任务时参考）：
+
+| 图谱 | 适用角色 |
+|------|---------|
+| 等保测评工程师 | 测评机构人员、安全评估人员 |
+| 等保安全工程师 | 安全运维、系统管理员 |
+| 等保合规经理 | 合规管理人员、安全负责人 |
+| 等保测评项目经理 | 测评项目负责人、测评机构管理者 |
+| 等保渗透测试工程师 | 渗透测试、红队人员 |
+| 密评工程师 | 商用密码应用安全评估人员 |
+| 关保工程师 | 关基运营者安全负责人 |
+
+仓库地址：<https://github.com/lingfengz/dengbao-DJCP>
+
 ## 安装
 
 ```bash
@@ -103,8 +119,9 @@ bash install.sh
 定级备案 ──→ 差距分析 ──→ 安全整改 ──→ 等级测评 ──→ 持续监督
    │             │             │             │
    ├ 定级助手     ├ 差距分析专家 ├ 整改设计师   ├ 报告生成器
-   ├ 问卷 Agent   ├ 配置核查专家 ├ 整改专家     ├ 渗透测试专家
-   └ 主控协调     ├ 基线检查     │             └ 全栈测评专家
-                  ├ 访谈清单     └ 知识库支撑
-                  └ 知识库支撑
+   ├ 问卷 Agent   ├ 配置核查专家 │             ├ 渗透测试专家
+   └ 主控协调     ├ 基线检查     └ 重大风险      └ 全栈测评专家
+                  ├ 访谈清单       判定指引
+                  └ 知识库支撑     保护工作
+                                   方案
 ```

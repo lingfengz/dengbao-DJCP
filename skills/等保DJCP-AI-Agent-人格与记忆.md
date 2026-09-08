@@ -1,7 +1,7 @@
 ---
 name: dengbao-personality-memory-foundation
 description: "Use to define the foundational personality and persistent memory for a unified dengbao (等级保护) AI Agent. Apply before loading specialized skills when a single agent needs to span the full lifecycle of classification, gap analysis, remediation, assessment, and policy Q&A."
-version: 2.0.0
+version: 2.2.0
 author: Hermes Agent (lingfengz/dengbao-DJCP)
 license: MIT
 metadata:
@@ -12,7 +12,7 @@ metadata:
 
 # 等保 DJCP AI Agent 人格与记忆基础（Personality & Memory Foundation）
 
-> 基于 dengbao-DJCP v2.0 · 覆盖 22+ Skill 文件核心知识  
+> 基于 dengbao-DJCP v2.2 · 覆盖 22+ Skill 文件核心知识  
 > 依据：GB/T 22239-2019、GB/T 28448-2019、GB/T 22240-2020、GB/T 25070-2019、公网安〔2025〕1846号；2026 新增：GA/T 1390.6~9-2025、GA/T 2347/2348-2025、GA/T 2380/2381/2394/2395-2026、公网安〔2025〕2391号、公安部令第176号  
 > 参考：等保标准规范库（27 份 PDF 标准文件）
 
@@ -374,6 +374,7 @@ codex --system "$(cat skills/等保DJCP-AI-Agent-人格与记忆.md)"
 
 | 版本 | 日期 | 变更内容 |
 |:---:|:---:|---------|
+| v2.2 | 2026-09 | 全仓库一致性巡检：修复流程全景图残留引用（整改专家已合并）；新增密评/关保/测评项目经理/渗透测试 4 份配套技能图谱（skill-maps 3→7）；补齐 LICENSE 文件 |
 | v2.1 | 2026-08 | 同步 2026 最新政策与标准：网络安全法修订（2026.1.1 施行）、网络数据安全管理条例、网络数据安全风险评估办法（2026.8.20 施行）、公安机关网络空间安全监督检查办法（公安部令第176号，2026.10.1 施行）、等保新技术行标（GA/T 1390.6~9-2025 等 6 项）与数据安全专项标准（GA/T 2380/2381/2394/2395-2026）、高风险判定实施指引 2025 版（公网安〔2025〕2391号） |
 | v2.0 | 2026-06 | 基于 dengbao-DJCP v2.0 重构，覆盖 22+ Skill 核心知识；同步 2025 版政策 |
 | v1.0 | 2026-06 | 初始版本 |

@@ -8,7 +8,7 @@ Github 开源项目地址：**[https://github.com/lingfengz/dengbao-DJCP](https:
 [![License](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
 [![Skills](https://img.shields.io/badge/skills-22-green?style=flat-square)](skills/)
 [![Skill Maps](https://img.shields.io/badge/skill--maps-7-orange?style=flat-square)](skill-maps/)
-[![Knowledge Base](https://img.shields.io/badge/knowledge--base-35%2B%20docs-brightgreen?style=flat-square)](skills/等保测评知识库/)
+[![Knowledge Base](https://img.shields.io/badge/knowledge--base-35%2B%20topics-brightgreen?style=flat-square)](skills/等保测评知识库/)
 
 ---
 
@@ -51,7 +51,7 @@ bash install.sh
 # 📦 等保测评 Skill 集合安装工具
 # 源目录: /path/to/dengbao-DJCP/skills
 # 目标目录: ~/.hermes/profiles/default/skills/dengbao-DJCP
-# ✅ 安装完成！共 22 个 skill 文件
+# ✅ 安装完成！共 24 个 skill 文件（22 个 Skill + 知识库 2 个文件）
 ```
 
 安装后**重启 Hermes 桌面版**，下次对话即可自动触发。
@@ -166,7 +166,7 @@ cat skill-maps/map-等保测评工程师.md
 
 ### 5. 查看完整知识库
 
-知识库位于 `skills/等保测评知识库/`，包含 **35+ 文档**：
+知识库位于 `skills/等保测评知识库/`，包含 **35+ 主题**（合并为单文件 `references/全部内容.md`，约 94KB）：
 
 ```bash
 # 查看知识库导航
@@ -238,7 +238,7 @@ less skills/等保测评知识库/references/全部内容.md
 
 | Skill | 文件名 | 一句话描述 |
 |-------|--------|-----------|
-| **等保测评知识库** | `skills/等保测评知识库/` | 35+ 文档完整知识库（法规 / 基线 / 案例 / 漏洞 / 整改） |
+| **等保测评知识库** | `skills/等保测评知识库/` | 35+ 主题完整知识库（单文件合并版；法规 / 基线 / 案例 / 漏洞 / 整改） |
 | 等保政策解读与培训专家 | `skills/等保政策解读与培训专家.md` | 法规标准解读 + 培训材料生成 |
 | 等保2025政策释疑 | `skills/网络安全等级保护工作事项说明专家.md` | 公网安〔2025〕1846号 24项政策问答 |
 | 等保高风险判定实施指引 | `skills/网络安全等级保护测评高风险判定实施指引（试行）.md` | 官方高风险判例规则 |
@@ -310,7 +310,7 @@ dengbao-DJCP/
     ├── 安全整改方案设计师.md          # ★ 核心
     ├── 等保测评报告生成器.md          # ★ 核心 · 支持2025版模板
     ├── 等保测评重大风险问题指导 Skill.md  # ★ 32项重大风险触发项
-    ├── 等保测评知识库/               # 35+ 文档
+    ├── 等保测评知识库/               # 35+ 主题（单文件合并版）
     ├── 网络安全等级保护工作事项说明专家.md  # 2025政策释疑
     ├── 网络安全等级保护测评高风险判定实施指引（试行）.md  # 官方判例
     ├── 等保保护工作方案专家.md        # 三级以上系统保护方案
@@ -380,7 +380,7 @@ dengbao-DJCP/
 ### v 2.2（当前）
 - **7 份技能图谱**（测评工程师 / 安全工程师 / 合规经理 / 测评项目经理 / 渗透测试工程师 / 密评 / 关保）
 - **22 个 AI Agent Skill**（覆盖定级 / 差距 / 整改 / 报告 / 风险判定 / 知识库 / 项目管理 / 政策释疑）
-- 35+ 文档完整知识库
+- 35+ 主题完整知识库（单文件合并版）
 - 2025版更新：支持新版报告模板、第五级系统、保护工作方案、备案动态更新
 - **v2.2 更新（2026-09）**：补齐 4 份建设中技能图谱（测评项目经理 / 渗透测试工程师 / 密评 / 关保），技能图谱 3 → 7
 - **2026版更新（2026-08）**：同步网络安全法修订（2026.1.1 施行）、网络数据安全管理条例、网络数据安全风险评估办法（2026.8.20 施行）、公安机关网络空间安全监督检查办法（公安部令第176号，2026.10.1 施行）；新增等保新技术行标 6 项（GA/T 1390.6~9-2025、GA/T 2347/2348-2025，2026.2.1 实施）与数据安全专项标准 4 项（GA/T 2380/2381/2394/2395-2026）；高风险判定指引标注 2025 版（公网安〔2025〕2391号，81 项判例）
