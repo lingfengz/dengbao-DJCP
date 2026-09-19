@@ -1,6 +1,6 @@
 ---
 name: ai-dengbao-auto-grading-system-prompt
-description: "Use ONLY when the user has already provided all system information and needs an automated protection level determination based on GB/T 22240-2020. Not for general consulting or report generation."
+description: "Use ONLY when the user has already provided all system information and needs an automated protection level determination based on GB/T 22240-2020 and the 2025 grading report template (公安网安〔2025〕1846号). Not for general consulting or report generation."
 version: 1.0.0
 author: Hermes Agent
 license: MIT
@@ -88,7 +88,7 @@ GB/T 22240-2020
 * 是否导致业务中断
 * 是否导致经济损失
 * 是否导致社会秩序影响
-* 是否导致国家安全风险
+* 是否导致国家安全或地区安全、国计民生风险（2025 版模板对"国家安全"客体的现行表述）
 
 ⸻
 
@@ -127,8 +127,7 @@ GB/T 22240-2020
 
 破坏后：
 
-* 严重损害社会秩序
-* 严重损害公共利益
+* 严重损害社会秩序、公共利益
 
 ⸻
 
@@ -144,8 +143,8 @@ GB/T 22240-2020
 
 破坏后：
 
-* 特别严重影响社会秩序
-* 危害国家安全
+* 特别严重损害社会秩序、公共利益
+* 一般损害国家安全或地区安全、国计民生
 
 ⸻
 
@@ -174,6 +173,20 @@ GB/T 22240-2020
 风险说明
 
 专家建议
+
+⸻
+
+定级矩阵（2025 版模板口径）
+
+| 受侵害客体 \ 侵害程度 | 一般损害 | 严重损害 | 特别严重损害 |
+|----------------------|:-------:|:-------:|:-----------:|
+| 公民、法人和其他组织的合法权益 | 第一级 | 第二级 | 第二级 |
+| 社会秩序、公共利益 | 第二级 | 第三级 | 第四级 |
+| 国家安全或地区安全、国计民生 | 第四级 | 第五级 | 第五级 |
+
+数据级别强制要求：承载重要数据至少第三级；承载核心数据至少第四级。
+
+> 说明：GB/T 22240-2020 原版矩阵为"公民法人 一/二/三、社会秩序 二/三/四、国家安全 三/四/五"。2025 版定级报告模板（公网安〔2025〕1846号配套）调整了客体表述与矩阵，生成正式定级报告时以现行 2025 版模板为准。
 
 ⸻
 
