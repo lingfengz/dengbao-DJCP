@@ -51,8 +51,10 @@ bash install.sh
 # 📦 等保测评 Skill 集合安装工具
 # 源目录: /path/to/dengbao-DJCP/skills
 # 目标目录: ~/.hermes/profiles/default/skills/dengbao-DJCP
-# ✅ 安装完成！共 25 个 skill 文件（23 个 Skill + 知识库 2 个文件）
+# ✅ 安装完成！共安装 24 项，其中可被 Hermes 识别的 SKILL.md: 24 个
 ```
+
+> install.sh 会按每个 Skill 的 frontmatter `name` 建立 `<name>/SKILL.md` 目录结构。Hermes 通过扫描 `SKILL.md` 发现技能，平铺的 `.md` 文件不会被识别。
 
 安装后**重启 Hermes 桌面版**，下次对话即可自动触发。
 
@@ -67,8 +69,8 @@ cp -r skills/* ~/.hermes/profiles/default/skills/dengbao-DJCP/
 # 删除 archive（已合并的备份文件）
 rm -rf ~/.hermes/profiles/default/skills/dengbao-DJCP/archive
 
-# 重启 Hermes 使生效
-hermes restart
+# 重新打开 Hermes 客户端使生效（Hermes 无 restart 子命令）
+echo "重新打开 Hermes 客户端后生效"
 ```
 
 #### 方法 C：Codex CLI（OpenAI）
@@ -76,13 +78,12 @@ hermes restart
 [Codex CLI](https://github.com/openai/codex) 是 OpenAI 的终端编程 Agent。将 Skill 作为系统指令注入：
 
 ```bash
-# 方式1：启动时加载
-codex --system "$(cat skills/等保定级助手.md)"
+# Codex CLI 会读取项目根目录的 AGENTS.md / CLAUDE.md，无需 --system 参数
 
-# 方式2：对话中引用文件（Codex 支持 @ 引用）
+# 方式1：对话中引用文件（Codex 支持 @ 引用）
 # 在对话中输入：@skills/等保定级助手.md  请帮我做等保定级
 
-# 方式3：添加到项目根目录的 CLAUDE.md（Codex 自动读取）
+# 方式2：添加到项目根目录的 CLAUDE.md（Codex 自动读取）
 cp skills/等保定级助手.md .codex.md
 ```
 
@@ -95,7 +96,7 @@ cp skills/等保定级助手.md .codex.md
 cat skills/等保定级助手.md >> CLAUDE.md
 
 # 方式2：启动时加载
-claude --prompt "$(cat skills/等保定级助手.md)"
+cat skills/等保定级助手.md | claude -p
 
 # 方式3：对话中引用
 # 在 CLAUDE.md 中写入：
@@ -123,13 +124,14 @@ cat skills/等保定级助手.md > my-prompt.md
 
 #### 方法 F：VS Code / Cursor / 其他编辑器 AI 插件
 
-将 Skill 文件添加到项目的 `.clinerules` 或 `.cursorrules`：
+Cursor 的项目规则必须是 `.cursor/rules/` 下的 `.mdc` 文件，纯 `.md` 会被静默忽略；旧的 `.cursorrules` 已被 Agent 模式弃用。
 
 ```bash
-# 以等保定级助手为例，追加到规则文件
-echo "" >> .clinerules
-cat skills/等保定级助手.md >> .clinerules
+mkdir -p .cursor/rules
+{ echo "---"; echo "description: 等保测评专家人格与知识"; echo "globs: [\"*\"]"; echo "alwaysApply: true"; echo "---"; echo; cat skills/等保定级助手.md; } > .cursor/rules/dengbao.mdc
 ```
+
+Claude 的 VS Code 扩展或其他插件，把 Skill 内容追加到项目根目录的 CLAUDE.md 或 AGENTS.md 即可。
 
 ### 3. 验证安装
 

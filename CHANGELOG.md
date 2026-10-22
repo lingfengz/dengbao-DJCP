@@ -1,5 +1,26 @@
 # dengbao-DJCP 更新记录
 
+## v2.2.2（2026-10-22）
+
+> 变更规模：2 个文件（install.sh 重写 + README 命令修正）
+
+### 🔧 修复 install.sh 实际不生效
+
+`install.sh` 原先把 `skills/*.md` 平铺复制到 `~/.hermes/profiles/<profile>/skills/dengbao-DJCP/`，但 Hermes 通过扫描 `SKILL.md` 发现技能，平铺的中文名 `.md` 不会被识别——实测复制 25 个文件后仅 1 个生效。
+
+现改为按每个文件 frontmatter 的 `name` 建立 `<name>/SKILL.md` 目录结构，实测 24 项全部可被 Hermes 识别；同时清理残留的平铺 `.md`。
+
+### 📄 README 失效命令修正
+
+| 位置 | 原内容 | 问题 | 修正 |
+|------|--------|------|------|
+| 方法 B | `hermes restart` | Hermes 无此子命令 | 改为重新打开客户端 |
+| 方法 C | `codex --system ...` | Codex CLI 无 `--system` 参数 | 删除，改为说明读取 AGENTS.md |
+| 方法 D | `claude --prompt ...` | 无 `--prompt` 参数 | 改为 `cat ... \| claude -p` |
+| 方法 F | `.cursorrules` | 已弃用，`.cursor/rules` 只认 `.mdc` | 改为 `.cursor/rules/dengbao.mdc` |
+
+---
+
 ## v2.2.1（2026-09-19）
 
 > 变更规模：6 个文件口径统一修订 ｜ 版本 v2.2 → v2.2.1
